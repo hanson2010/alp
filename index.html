@@ -9,9 +9,10 @@
 
     <title>Hanson Hu | A lifelong programmer.</title>
 
-    <link type="text/css" href="bootstrap.min.css" rel="stylesheet" />
-    <link type="text/css" href="prettify.css" rel="stylesheet" />
-    <link type="text/css" href="common.css" rel="stylesheet" />
+    <link type="text/css" href="styles/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="styles/prettify.css" rel="stylesheet" />
+    <link type="text/css" href="styles/iosevka-fixed.css" rel="stylesheet" />
+    <link type="text/css" href="styles/common.css" rel="stylesheet" />
   </head>
   <body>
     <div class="site-wrapper">
@@ -36,21 +37,21 @@ iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNI
         </div>
         <div class="col-12 col-lg-6">
           <h2>
-            <span class="spaced"><a id="btn-about" href="#" onclick="javascript:about();">About</a></span>
+            <span class="spaced"><a id="btn-about" href="#">About</a></span>
             |
-            <span class="spaced"><a id="btn-contact" href="#" onclick="javascript:contact();">Contact</a></span>
+            <span class="spaced"><a id="btn-contact" href="#">Contact</a></span>
             |
-            <span class="spaced"><a id="btn-connect" href="#" onclick="javascript:connect();">Connect</a></span>
+            <span class="spaced"><a id="btn-connect" href="#">Connect</a></span>
             |
-            <span class="spaced"><a href="https://github.com/hanson2010" target="_blank">GitHub</a> <img src="external-link.svg" alt="external link" /></span>
+            <span class="spaced"><a id="btn-key" href="#">Public Key</a></span>
             |
-            <span class="spaced"><a href="http://www.infoq.com/cn/profile/%E8%83%A1%E6%B5%B7%E7%94%9F" target="_blank">InfoQ</a> <img src="external-link.svg" alt="external link" /></span>
+            <span class="spaced"><a href="https://github.com/hanson2010" target="_blank">GitHub</a> <img src="images/external-link.svg" alt="external link" /></span>
           </h2>
         </div>
       </div>
-      <div id="about">
+      <div id="about" class="tabcontent">
         <div class="row">
-          <div class="col-12 col-lg-5"><img class="rounded" src="portrait.png" /></div>
+          <div class="col-12 col-lg-5"><img class="rounded" src="images/portrait.png" /></div>
           <div class="col-12 col-lg-7">
             <pre class="prettyprint lang-yaml"># This was written in YAML (YAML Ain't Markup Language)
 # http://yaml.org/
@@ -59,33 +60,92 @@ name:            Hanson Hu
 date_of_birth:   August 1978
 lives_in:        Taipei, China
 interested_in:   ["Airport", "Albert Einstein", "Andrea 
-                 Bocelli", "Cantonese", "Cui Jian", "Forrest 
-                 Gump", "Fried leek dumpling", "FSX", 
+                 Bocelli", "Cantonese", "Cui Jian",
+                 "Forrest Gump", "Fried leek dumpling",
                  "Geography", "German", "Google Earth", 
-                 "Kindle", "Latex", "Map", "Physics", 
-                 "Python", "Rubic's cube", "Second hand 
-                 rose", "The Ordinary World", "Trivia", 
-                 "Wang Xiaobo", "Wikipedia", "Xiamen"]
+                 "Kindle", "Latex", "Map", "MSFS 2020",
+                 "Physics", "Python", "Rubic's cube",
+                 "Second hand rose", "The Ordinary World",
+                 "Trivia", "Wang Xiaobo", "Wikipedia",
+                 "Xiamen"]
 uninterested_in: ["Flash", "Food made of insects", 
                  "Hollywood movie", "KTV", "Soccer", 
                  "Stock"]</pre>
           </div>
         </div>
       </div>
-      <div id="contact">
+      <div id="contact" class="tabcontent">
         <div class="row centered">
           <div class="col-12">
-            <span class="pre">root &lt;at&gt; pythoner &lt;dot&gt; work</span>
+            <pre class="prettyprint">root &lt;at&gt; pythoner &lt;dot&gt; work</pre>
           </div>
         </div>
       </div>
-      <div id="connect">
+      <div id="connect" class="tabcontent">
         <div class="row centered">
-          <div class="col-12 col-lg-6">
-            <img class="rounded" src="wechat.png" />
+          <div class="col-12">
+            <img class="rounded" src="images/wechat.png" />
           </div>
-          <div class="col-12 col-lg-6">
-            <img class="rounded" src="line.png" />
+        </div>
+      </div>
+      <div id="key" class="tabcontent">
+        <div class="row centered">
+          <div class="col-12">
+            <pre class="prettyprint lang-yaml">Fingerprint: A59C 219B E9AA 825C AB62
+9A4B B4DC CFE6 F609 B0F6<br />
+64-bit: B4DC CFE6 F609 B0F6</pre><br />
+            <a href="./Hanson Hu_0xF609B0F6_public.asc" download target="_blank">Download</a><br /><br />
+            <textarea id="copytarget" class="form-control prettyprint">-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+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
+=2BlJ
+-----END PGP PUBLIC KEY BLOCK-----"</textarea>
           </div>
         </div>
       </div>
@@ -97,24 +157,22 @@ uninterested_in: ["Flash", "Food made of insects",
     </div>
     </div>
 
-    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="popper.min.js"></script>
-    <script type="text/javascript" src="bootstrap.min.js"></script>
-    <script type="text/javascript" src="prettify.js"></script>
-    <script type="text/javascript" src="lang-yaml.js"></script>
-    <script type="text/javascript" src="main.js"></script>
-<script type="text/javascript">
+    <script type="text/javascript" src="scripts/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="scripts/popper.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/prettify.js"></script>
+    <script type="text/javascript" src="scripts/lang-yaml.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
+    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-619270-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-619270-6']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
+  gtag('config', 'UA-619270-6');
 </script>
+
   </body>
 </html>
